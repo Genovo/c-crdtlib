@@ -9,7 +9,7 @@ cache: &global_cache
 build:
   stage: build
   script:
-    - gradle assemble --build-cache
+    - gradle assemble --build-cache --info
   artifacts:
     paths:
       - build/
@@ -17,7 +17,7 @@ build:
 test:
   stage: test
   script:
-    - gradle allTests
+    - gradle allTests --info
   artifacts:
     paths:
       - build/reports/
@@ -27,7 +27,7 @@ publish:
   stage: deploy
   when: manual
   script:
-    - gradle publish
+    - gradle publish --info
   cache:
     # only pull global_cache
     <<: *global_cache
