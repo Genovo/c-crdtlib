@@ -9,6 +9,7 @@ cache: &global_cache
 build:
   stage: build
   script:
+    - pwd ; ls -l
     - gradle assemble --build-cache --info
   artifacts:
     paths:
@@ -17,6 +18,7 @@ build:
 test:
   stage: test
   script:
+    - pwd ; ls -l
     - gradle allTests --info
   artifacts:
     paths:
