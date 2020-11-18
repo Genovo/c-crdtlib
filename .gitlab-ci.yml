@@ -5,7 +5,7 @@ before_script:
 
 cache: &global_cache
   # per-branch cache
-  key: ${CI_COMMIT_REF_SLUG}
+  key: ${CI_COMMIT_REF_SLUG}_2
   paths:
     - .gradle/
 
