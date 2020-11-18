@@ -12,7 +12,7 @@ cache: &global_cache
 build:
   stage: build
   script:
-    - pwd ; echo $CI_PROJECT_DIR ; ls -la ; ls -l .gradle
+    - pwd ; echo $CI_PROJECT_DIR ; ls -la ; ls -l .gradle ; true
     - gradle assemble --build-cache --info
   artifacts:
     paths:
@@ -21,7 +21,7 @@ build:
 test:
   stage: test
   script:
-    - pwd ; echo $CI_PROJECT_DIR ; ls -la ; ls -l .gradle
+    - pwd ; echo $CI_PROJECT_DIR ; ls -la ; ls -l .gradle ; true
     - gradle allTests --info
   artifacts:
     paths:
