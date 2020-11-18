@@ -14,6 +14,7 @@ build:
   script:
     - pwd ; echo $CI_PROJECT_DIR ; ls -la ; ls -l .gradle || true
     - gradle assemble --build-cache --info
+    - pwd ; echo $CI_PROJECT_DIR ; ls -la ; ls -l .
   artifacts:
     paths:
       - build/
@@ -23,6 +24,7 @@ test:
   script:
     - pwd ; echo $CI_PROJECT_DIR ; ls -la ; ls -l .gradle || true
     - gradle allTests --info
+    - pwd ; echo $CI_PROJECT_DIR ; ls -la ; ls -l .
   artifacts:
     paths:
       - build/reports/
